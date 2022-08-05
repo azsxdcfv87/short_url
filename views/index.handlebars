@@ -1,0 +1,41 @@
+<div class="container-md d-flex align-items-center" style="height:150vh">
+  <div class="w-100 p-5">
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <h1>URL Shortener</h1>
+      </blockquote>
+    </figure>
+    <div class="text-center">
+      <img
+        class="img-fluid mb-5"
+        style="height:15vh"
+        src="https://assets-lighthouse.alphacamp.co/uploads/image/file/16716/ExportedContentImage_00.png"
+      />
+    </div>
+    <form action="/shorturl/create" method="post">
+      <div class="row">
+        <div class="col-10 offset-1">
+          <input
+            class="form-control bg-light"
+            type="text"
+            placeholder="Input URL here"
+            name="url"
+            value=""
+            aria-label="default input example"
+            required
+          />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button
+            type="submit"
+            class="btn btn-outline-primary mt-2"
+          >Shorten</button>
+          <button type="reset" class="btn btn-outline-primary">Reset</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
