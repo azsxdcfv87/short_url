@@ -1,17 +1,21 @@
 <div class="row col-10 offset-1">
   <div id="short-url" class="text-align-center mb-2">
     <p>Success! Please use this link:</p>
-    <a href="{{originURL}}" target="_black"><span>{{shortURL}}</span></a>
+    <a href="{{originURL}}" target="_black" id="shortURL"><span
+      >{{shortURL}}</span></a>
   </div>
-  <button id="copy-button" class="btn-secondary" onclick="copy()">Copy</button>
-  <script>
-    function copy() { const url =
-    document.querySelector('#short-urlaspan').innerText
-    navigator.clipboard.writeText(url) alert('Copied Successfully！') }
-  </script>
   <button
     type="button"
     class="btn btn-primary mt-2"
     onclick="javascript:history.back()"
   >回到首頁</button>
 </div>
+
+{{! <button id="copy-button" class="btn-secondary" onclick="copy()">Copy</button>
+  <script>
+    function copy() { let input = document.getElementById('input')
+    input.select() if(document.execCommand('copy')) {
+    document.execCommand('copy')//執行複製到剪貼板
+    window.alert('已複製！')//反饋信息 } // 無法複製（不可用） } else {
+    window.alert('複製失敗！') }
+  </script> }}
